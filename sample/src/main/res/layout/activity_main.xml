@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_root"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/scroll_user_content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/linear_container"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16.0dip"
+            android:divider="@drawable/shap_line"
+            android:orientation="vertical"
+            android:showDividers="middle">
+
+            <FrameLayout
+                android:id="@+id/container_login"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <RelativeLayout
+                    android:id="@+id/item_user"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_press_bg"
+                    android:paddingBottom="18.0dip"
+                    android:paddingLeft="20.0dip"
+                    android:paddingTop="18.0dip">
+
+                    <FrameLayout
+                        android:id="@+id/fl_avatar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <com.makeramen.roundedimageview.RoundedImageView
+                            android:id="@+id/img_user_avatar"
+                            android:layout_width="50.0dip"
+                            android:layout_height="50.0dip"
+                            android:layout_marginRight="10.0dip"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/tx_image"
+                            app:riv_border_color="@color/gray300"
+                            app:riv_border_width="0.30000007dip"
+                            app:riv_oval="true"/>
+
+                        <ImageView
+                            android:id="@+id/iv_avatar_gif"
+                            android:layout_width="50.0dip"
+                            android:layout_height="50.0dip"
+                            android:layout_marginRight="10.0dip"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/tx_image"
+                            android:visibility="gone"/>
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/text_user_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10.0dip"
+                        android:layout_marginRight="6.0dip"
+                        android:layout_toRightOf="@id/fl_avatar"
+                        android:drawablePadding="10.0dip"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:maxLength="15"
+                        android:text="@string/deng_lu_he_zhu_ce"
+                        android:textColor="@color/selector_color_text1_night"
+                        android:textSize="16.0sp"/>
+
+                    <ImageView
+                        android:id="@+id/iv_edit_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/text_user_name"
+                        android:paddingBottom="10.0dip"
+                        android:paddingRight="10.0dip"
+                        android:paddingTop="10.0dip"
+                        android:src="@drawable/icon_edit_info"/>
+                </RelativeLayout>
+            </FrameLayout>
+
+            <View
+                android:id="@+id/view_divider_1"
+                android:layout_width="fill_parent"
+                android:layout_height="16.0dip"/>
+
+            <LinearLayout
+                android:id="@+id/linear_container_user"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:divider="@drawable/shap_line"
+                android:dividerPadding="14.0dip"
+                android:orientation="vertical"
+                android:showDividers="middle">
+
+                <RelativeLayout
+                    android:id="@+id/item_public_note"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45.0dip"
+                    android:background="@drawable/selector_press_bg_dark">
+
+                    <TextView
+                        android:id="@+id/text_public_note"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="14.0dip"
+                        android:layout_marginRight="16.0dip"
+                        android:drawableLeft="@drawable/grzy_icon_article_public"
+                        android:drawablePadding="10.0dip"
+                        android:drawableStart="@drawable/grzy_icon_article_public"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:text="@string/gong_kai_wen_zhang"
+                        android:textColor="@color/selector_color_text1_night"
+                        android:textSize="16.0sp"/>
+
+                    <TextView
+                        android:id="@+id/text_public_note_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="24.0dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20.0dip"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:textColor="@color/text_bright_light"
+                        android:textSize="14.0sp"
+                        android:visibility="visible"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/item_private_note"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/user_item_height"
+                    android:background="@drawable/selector_press_bg_dark">
+
+                    <TextView
+                        android:id="@+id/text_private_note"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="14.0dip"
+                        android:layout_marginRight="16.0dip"
+                        android:drawableLeft="@drawable/grzy_icon_article_secret"
+                        android:drawablePadding="10.0dip"
+                        android:drawableStart="@drawable/grzy_icon_article_secret"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:text="@string/si_mi_wen_zhang"
+                        android:textColor="@color/selector_color_text1_night"
+                        android:textSize="16.0sp"/>
+
+                    <TextView
+                        android:id="@+id/text_private_note_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="24.0dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20.0dip"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:textColor="@color/text_bright_light"
+                        android:textSize="14.0sp"
+                        android:visibility="visible"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/item_mark_note"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/user_item_height"
+                    android:background="@drawable/selector_press_bg_dark">
+
+                    <TextView
+                        android:id="@+id/text_mark_note"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="14.0dip"
+                        android:layout_marginRight="16.0dip"
+                        android:drawableLeft="@drawable/grzy_icon_mark"
+                        android:drawablePadding="10.0dip"
+                        android:drawableStart="@drawable/grzy_icon_mark"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:text="@string/bookmark_article"
+                        android:textColor="@color/selector_color_text1_night"
+                        android:textSize="16.0sp"/>
+
+                    <TextView
+                        android:id="@+id/text_mark_note_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="24.0dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20.0dip"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:textColor="@color/text_bright_light"
+                        android:textSize="14.0sp"
+                        android:visibility="visible"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/item_liked_note"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/user_item_height"
+                    android:background="@drawable/selector_press_bg_dark">
+
+                    <TextView
+                        android:id="@+id/text_like_note"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="14.0dip"
+                        android:layout_marginRight="16.0dip"
+                        android:drawableLeft="@drawable/grzy_icon_like_normal"
+                        android:drawablePadding="10.0dip"
+                        android:drawableStart="@drawable/grzy_icon_like_normal"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:text="@string/xi_huan_de_wen_zhang"
+                        android:textColor="@color/selector_color_text1_night"
+                        android:textSize="16.0sp"/>
+
+                    <TextView
+                        android:id="@+id/text_like_note_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20.0dip"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:textColor="@color/text_bright_light"
+                        android:textSize="14.0sp"
+                        android:visibility="visible"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/item_topic"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/user_item_height"
+                    android:background="@drawable/selector_press_bg_dark">
+
+                    <TextView
+                        android:id="@+id/tv_topic_note"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="14.0dip"
+                        android:layout_marginRight="16.0dip"
+                        android:drawableLeft="@drawable/icon_mine_topic_gray"
+                        android:drawablePadding="10.0dip"
+                        android:drawableStart="@drawable/icon_mine_topic_gray"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:text="@string/wo_de_zhuan_ti"
+                        android:textColor="@color/selector_color_text1_night"
+                        android:textSize="16.0sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_topic_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20.0dip"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:textColor="@color/text_bright_light"
+                        android:textSize="14.0sp"
+                        android:visibility="visible"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/item_mine_book"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/user_item_height"
+                    android:background="@drawable/selector_press_bg_dark">
+
+                    <TextView
+                        android:id="@+id/tv_mine_book"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="14.0dip"
+                        android:layout_marginRight="16.0dip"
+                        android:drawableLeft="@drawable/icon_mine_book_gray"
+                        android:drawablePadding="10.0dip"
+                        android:drawableStart="@drawable/icon_mine_book_gray"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:text="@string/mine_notebook"
+                        android:textColor="@color/selector_color_text1_night"
+                        android:textSize="16.0sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_mine_book_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20.0dip"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:textColor="@color/text_bright_light"
+                        android:textSize="14.0sp"
+                        android:visibility="visible"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/item_wallet"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/user_item_height"
+                    android:background="@drawable/selector_press_bg_dark">
+
+                    <TextView
+                        android:id="@+id/text_wallet"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="14.0dip"
+                        android:layout_marginRight="16.0dip"
+                        android:drawableLeft="@drawable/grzy_icon_wallet_normal"
+                        android:drawablePadding="10.0dip"
+                        android:drawableStart="@drawable/grzy_icon_wallet_normal"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:text="@string/wo_de_qian_bao"
+                        android:textColor="@color/selector_color_text1_night"
+                        android:textSize="16.0sp"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view_divider_2"
+                android:layout_width="fill_parent"
+                android:layout_height="16.0dip"/>
+
+            <LinearLayout
+                android:id="@+id/linear_container_common"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:divider="@drawable/shap_line"
+                android:dividerPadding="14.0dip"
+                android:orientation="vertical"
+                android:showDividers="middle">
+
+                <RelativeLayout
+                    android:id="@+id/itme_theme"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/user_item_height"
+                    android:background="@drawable/selector_press_bg_dark"
+                    android:clickable="false">
+
+                    <TextView
+                        android:id="@+id/text_theme_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="14.0dip"
+                        android:layout_marginRight="16.0dip"
+                        android:drawableLeft="@drawable/grzy_icon_night"
+                        android:drawablePadding="10.0dip"
+                        android:drawableStart="@drawable/grzy_icon_night"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:text="@string/menu_night_theme"
+                        android:textColor="@color/selector_color_text1_night"
+                        android:textSize="16.0sp"/>
+
+                    <android.support.v7.widget.SwitchCompat
+                        android:id="@+id/switch_theme"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="20.0dip"
+                        />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/item_history"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/user_item_height"
+                    android:background="@drawable/selector_press_bg_dark">
+
+                    <TextView
+                        android:id="@+id/text_history"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="14.0dip"
+                        android:layout_marginRight="16.0dip"
+                        android:drawableLeft="@drawable/icon_history"
+                        android:drawablePadding="10.0dip"
+                        android:drawableStart="@drawable/icon_history"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:text="@string/history_record"
+                        android:textColor="@color/selector_color_text1_night"
+                        android:textSize="16.0sp"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="16.0dip"/>
+
+            <LinearLayout
+                android:id="@+id/ll_container_others"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:divider="@drawable/shap_line"
+                android:dividerPadding="14.0dip"
+                android:orientation="vertical"
+                android:showDividers="middle">
+
+                <RelativeLayout
+                    android:id="@+id/item_invitation"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/user_item_height"
+                    android:background="@drawable/selector_press_bg_dark">
+
+                    <TextView
+                        android:id="@+id/text_invitation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="14.0dip"
+                        android:layout_marginRight="16.0dip"
+                        android:drawableLeft="@drawable/icon_share_app"
+                        android:drawablePadding="10.0dip"
+                        android:drawableStart="@drawable/icon_share_app"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:text="@string/share_jianshu"
+                        android:textColor="@color/selector_color_text1_night"
+                        android:textSize="16.0sp"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/item_feedback"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/user_item_height"
+                    android:background="@drawable/selector_press_bg_dark">
+
+                    <TextView
+                        android:id="@+id/text_feedback"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="14.0dip"
+                        android:layout_marginRight="16.0dip"
+                        android:drawableLeft="@drawable/grzy_icon_feedback"
+                        android:drawablePadding="10.0dip"
+                        android:drawableStart="@drawable/grzy_icon_feedback"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:text="@string/yi_jian_fan_kui"
+                        android:textColor="@color/selector_color_text1_night"
+                        android:textSize="16.0sp"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/item_rate_star"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/user_item_height"
+                    android:background="@drawable/selector_press_bg_dark">
+
+                    <TextView
+                        android:id="@+id/text_rate_star"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="14.0dip"
+                        android:layout_marginRight="16.0dip"
+                        android:drawableLeft="@drawable/grzy_icon_rate"
+                        android:drawablePadding="10.0dip"
+                        android:drawableStart="@drawable/grzy_icon_rate"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:text="@string/rate_star_on_jianshu"
+                        android:textColor="@color/selector_color_text1_night"
+                        android:textSize="16.0sp"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="16.0dip"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

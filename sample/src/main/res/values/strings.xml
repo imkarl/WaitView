@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">WaitView Sample</string>
+    <string name="deng_lu_he_zhu_ce">登录 / 注册</string>
+    <string name="gong_kai_wen_zhang">公开文章</string>
+    <string name="si_mi_wen_zhang">私密文章</string>
+    <string name="bookmark_article">收藏的文章</string>
+    <string name="xi_huan_de_wen_zhang">喜欢的文章</string>
+    <string name="wo_de_zhuan_ti">我的专题</string>
+    <string name="mine_notebook">我的文集</string>
+    <string name="wo_de_qian_bao">我的钱包</string>
+    <string name="menu_night_theme">夜间模式</string>
+    <string name="no_history_record">还没有阅读记录</string>
+    <string name="share_jianshu">分享简书</string>
+    <string name="yi_jian_fan_kui">意见反馈</string>
+    <string name="rate_star_on_jianshu">给简书评分</string>
+    <string name="history_record">浏览记录</string>
+</resources>

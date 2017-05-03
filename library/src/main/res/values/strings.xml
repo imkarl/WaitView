@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">WaitView</string>
+    <item name="ta_waitview" type="id" />
+</resources>
