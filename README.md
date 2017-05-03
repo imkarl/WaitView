@@ -62,7 +62,7 @@ controller.color(color);
 透明度：@IntRange(from=0, to=255)
 controller.alpha(alpha);
 
-圆角半径：radius
+圆角半径：@Dimension
 controller.radius(radius);
 
 绘制区域：如 new Rect(0, 0, view.getWidth(), view.getHeight())
