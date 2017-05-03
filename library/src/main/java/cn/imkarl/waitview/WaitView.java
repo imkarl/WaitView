@@ -53,7 +53,7 @@ class WaitView extends View {
         mColor = color;
         return this;
     }
-    public WaitView radius(int radius) {
+    public WaitView radius(@Dimension int radius) {
         mRadius = radius;
         return this;
     }

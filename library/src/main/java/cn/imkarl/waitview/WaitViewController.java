@@ -65,7 +65,7 @@ public class WaitViewController {
         mColor = color;
         return this;
     }
-    public WaitViewController radius(int radius) {
+    public WaitViewController radius(@Dimension int radius) {
         mRadius = radius;
         return this;
     }
