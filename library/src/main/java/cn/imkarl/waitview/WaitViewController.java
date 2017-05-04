@@ -31,10 +31,7 @@ public class WaitViewController {
             height = view.getMeasuredHeight();
         }
 
-        RectF drawRect = new RectF(view.getPaddingLeft(),
-                0,
-                width-view.getPaddingRight(),
-                height-view.getPaddingBottom()*2);
+        RectF drawRect = new RectF(0, 0, width-view.getPaddingLeft()-view.getPaddingRight(), height-view.getPaddingTop()-view.getPaddingBottom());
         WaitViewController controller = (WaitViewController) view.getTag(R.id.ta_waitview);
         if (controller == null) {
             controller = new WaitViewController(view, drawRect);
