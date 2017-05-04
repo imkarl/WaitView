@@ -32,9 +32,9 @@ public class WaitViewController {
         }
 
         RectF drawRect = new RectF(view.getPaddingLeft(),
-                view.getPaddingTop(),
+                0,
                 width-view.getPaddingRight(),
-                height-view.getPaddingBottom());
+                height-view.getPaddingBottom()*2);
         WaitViewController controller = (WaitViewController) view.getTag(R.id.ta_waitview);
         if (controller == null) {
             controller = new WaitViewController(view, drawRect);
